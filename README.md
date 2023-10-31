@@ -1,6 +1,6 @@
 # Python Azure Function PYTHON_ISOLATE_WORKER_DEPENDENCIES Error
 
-This repository is a minimal example for the issue described here:
+This repository is a minimal example for the issue described here: <https://github.com/Azure/azure-functions-python-worker/issues/1339>
 
 ## App Settings
 
