@@ -44,4 +44,7 @@ Error calling sync triggers (BadRequest). Request ID = '0662ffb0-1263-4b14-9240-
 
 ### Workaround
 
-Remove the `PYTHON_ISOLATE_WORKER_DEPENDENCIES` app setting and redeploy.
+Either:
+
+* remove the `PYTHON_ISOLATE_WORKER_DEPENDENCIES` app setting and redeploy, or
+* comment out the `import newrelic.agent` line in `function_app.py`.
