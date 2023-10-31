@@ -1,12 +1,10 @@
 import azure.functions as func
 import logging
+
+# comment the below import to successfully deploy with PYTHON_ISOLATE_WORKER_DEPENDENCIES=1
 import newrelic.agent
 
 app = func.FunctionApp()
-
-
-newrelic.agent.initialize()
-newrelic.agent.register_application(timeout=2)
 
 
 @app.function_name(name="HttpExample")
@@ -16,10 +14,5 @@ newrelic.agent.register_application(timeout=2)
 )
 def test_function(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
-    application = newrelic.agent.application()
-    newrelic.agent.record_custom_event(
-        "CustomEvent",
-        {"key": "value"},
-        application,
-    )
+
     return func.HttpResponse("HttpExample function processed a request!")
