@@ -6,6 +6,7 @@ This repository is a minimal example for the issue described here: <https://gith
 
 * Python 3.10
 * Linux Consumption Plan
+* Python V2 Programming Model
 
 ## App Settings
 
